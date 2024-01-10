@@ -9,8 +9,10 @@ def conversation():
     answer = input().lower()
     if answer == "yes":
         print("That's good - the United States needs more coders!!")
-    else: 
+    elif answer == "no": 
         print("Perhaps you will change your mind")
+    else:
+        print("I don't understand")
     print("Goodbye")
 
 main()
