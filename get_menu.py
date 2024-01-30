@@ -18,7 +18,7 @@ def display_menu(menu_dict):
 def display_purchases(items_list):
     del items_list[-1]
     print("You purchased {} items".format(len(items_list)), end=" ")
-    print(*items_list, sep=", ", end="./n")
+    print(*items_list, sep=", ")
 
 def main():
     menu_selection = ""
@@ -31,4 +31,4 @@ def main():
 
     display_purchases(items_list)
 
-main
+main()
