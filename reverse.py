@@ -6,13 +6,15 @@ def intro_msg():
 
 def reverse_word(characters):
     reverse_string=""
-    for character in characters:
-        reverse_string = character + reverse_string
-    return reverse_string
+    i = 0
+    while i < len(characters):
+        reverse_string = characters[i] + reverse_string
+        i += 1
+    print(f"Below is your string in reverse: \n{reverse_string}")
+
 
 def main():
     word = intro_msg()
     word = reverse_word(word)
-    print(f"Below is your string in reverse: \n{word}")
 
 main()
