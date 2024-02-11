@@ -1,8 +1,5 @@
 def intro_msg():
-    print("I can reverse a string")
-    print("If you give me 'apple' i will return 'elppa'")
-    print("I can even do an entire sentence")
-    return input("Type something and see:")
+    return input("Enter a string to reverse it:")
 
 def reverse_word(characters):
     reverse_string=""
@@ -10,11 +7,14 @@ def reverse_word(characters):
     while i < len(characters):
         reverse_string = characters[i] + reverse_string
         i += 1
-    print(f"Below is your string in reverse: \n{reverse_string}")
+    print(f"Your string in reverse: {reverse_string}")
 
 
 def main():
-    word = intro_msg()
-    word = reverse_word(word)
-
+    run = True
+    while run:
+        word = intro_msg()
+        word = reverse_word(word)
+        if input('Press "q" to exit or hit enter to continue') == 'q' or "Q":
+            exit()
 main()
